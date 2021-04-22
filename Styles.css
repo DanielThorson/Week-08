@@ -1,0 +1,61 @@
+.header {
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.blue {
+  background-color: #0099ff;
+}
+
+button {
+  color: white;
+  background: #0099ff;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 1%;
+  width: 20%;
+}
+
+.cell {
+  width: 80%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: ;
+}
+
+.inline {
+  display: inline-block;
+  justify-content: center;
+}
+.justify {
+  display: flex;
+  justify-content: center;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
