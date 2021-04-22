@@ -1,4 +1,8 @@
-document.getElementById("revenue");
+let x = document.getElementById("revenue");
+
+let result = document.createElement("h3");
+result.innerText = "$100.00";
+x.prepend(result);
 
 fetch("https://donutshop-api.herokuapp.com/revenue?id=234", {
   method: "GET",
