@@ -9,18 +9,35 @@
 
 .font {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: #4d4d4d;
 }
 .blue {
-  background-color: #0099ff;
+  /* background-color: #0099ff; */
+  background: rgb(0, 122, 204);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 122, 204, 1) 0%,
+    rgb(51, 153, 255) 50%,
+    rgba(0, 122, 204, 1) 100%
+  );
+}
+
+.grey {
+  color: #999999;
 }
 
 button {
   color: white;
-  background: #0099ff;
+  background: #0686db;
   border-radius: 12px;
-  margin: 20px;
+  margin: 10px;
   padding: 1%;
   width: 20%;
+  border-style: none;
+  box-shadow: 0px 5px 10px 1px #bfbfbf;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
 }
 
 .cell {
@@ -47,10 +64,12 @@ button {
   align-items: center;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
   text-align: center;
 }
 input {
