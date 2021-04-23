@@ -56,6 +56,12 @@ button {
   font-weight: 500;
 }
 
+.btn2 {
+  border-radius: 60px;
+  background-color: rgb(27, 98, 156);
+  width: 20%;
+}
+
 .cell {
   width: 75%;
   margin: auto;

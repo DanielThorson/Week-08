@@ -36,3 +36,12 @@ fetch("https://donutshop-api.herokuapp.com/inventory?id=234", {
   .catch((err) => {
     console.error(err);
   });
+
+// for adding donuts
+let btn = document.querySelector("#donut_add");
+
+btn.addEventListener("click", function (event) {
+  let type = prompt("what kind do you wnat ot add?");
+  let price = prompt("how much do they cost?");
+  alert("inventory change complete");
+});
