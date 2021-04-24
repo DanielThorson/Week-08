@@ -38,10 +38,35 @@ fetch("https://donutshop-api.herokuapp.com/inventory?id=234", {
   });
 
 // for adding donuts
-let btn = document.querySelector("#donut_add");
+let btn3 = document.querySelector("#donut_add");
 
-btn.addEventListener("click", function (event) {
-  let type = prompt("what kind do you wnat ot add?");
-  let price = prompt("how much do they cost?");
+btn3.addEventListener("click", function (event) {
+  let type = prompt("Which type do you want to add?");
+  let price = prompt("How much do they cost?");
   alert("inventory change complete");
 });
+
+let btn6 = document.querySelector("#order");
+
+btn6.addEventListener("click", function (event) {
+  let type = prompt("Which type do you want to order?");
+  let count = prompt("How many do you want?");
+  alert("Customer Order Completed");
+});
+
+
+function getShopList() {
+  fetch("https://donutshop-api.herokuapp.com/shops/", {
+    method: "GET",
+  })
+    .then((response) => {
+      response.json();
+    })
+    .then((data) => console.log(JSON.stringify(data)))
+    .catch((err) => {
+      console.error(err);
+    });
+    
+}
+
+getShopList();

@@ -57,8 +57,8 @@ button {
 }
 
 .btn2 {
-  border-radius: 60px;
-  background-color: rgb(27, 98, 156);
+  color: #f1f1f1;
+  background-color: rgb(245, 63, 31);
   width: 20%;
 }
 
