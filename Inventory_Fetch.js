@@ -1,5 +1,5 @@
 var rows = [];
-fetch("https://donutshop-api.herokuapp.com/inventory?id=234", {
+fetch(`https://donutshop-api.herokuapp.com/inventory?id=${shopId}`, {
   method: "GET",
 })
   .then((response) => response.json())

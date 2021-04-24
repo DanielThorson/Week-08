@@ -8,8 +8,12 @@ fetch("https://donutshop-api.herokuapp.com/shops/", {
     let x = document.getElementById("shops");
     for (var i = 0; i < data.length; i++) {
       let result = document.createElement("option");
-      result.innerText = data[i]
+      result.innerText = data[i];
       result.value = data[i];
+      result.onclick = (Event) => {
+        shopName = Event.target.value;
+        getID(shopName);
+      };
       x.append(result);
       console.log(result);
     }
@@ -18,6 +22,23 @@ fetch("https://donutshop-api.herokuapp.com/shops/", {
     console.error(err);
   });
 
+function getID(name) {
+  fetch("https://donutshop-api.herokuapp.com/shop-id/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify({
+      name: name,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => (shopId = data.id))
+    .catch((err) => {
+      console.error(err);
+    });
+}
 // var shops = [];
 
 // fetch("https://donutshop-api.herokuapp.com/shops/", {

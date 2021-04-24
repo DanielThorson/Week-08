@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="./Styles.css">
     <script>
         var shopName;
-        var shopId = 42;
+        var shopId;
+        function loadPage (pageName){
+            fetch (pageName)
+            .then ((response) => response.text())
+            .then ((data) => {
+                document.getElementById('menu').innerHTML=data;
+            })
+        };
+        loadPage('./defaultmenu.html');
     </script>
 </head>
 <body class="background">
@@ -27,18 +35,10 @@
             <script src="./Shop_Fetch.js"></script>
         </div>
         <br>
-        <div>
-            <h3 class="">02. Please Make A Selection</h3>
-            <div class="flex center cell">
-                <button onclick="document.location='./Create_Donut_Shop.html'" class="button1">Create New Shop</button>
-                <button onclick="document.location='./Create_New_Donut_Type.html'" class="button1">Create New Donut</button>
-                <button onclick="document.location='./Add_Inventory.html'" class="button1">Add Inventory</button>
-                <button onclick="document.location='./Print_Inventory.html'" class="button1">Print Inventory</button>
-                <button onclick="document.location='./Print_Revenue.html'" class="button1">Print Revenue</button>
-                <button onclick="document.location='./Place_Order.html'" class="button1">Place Order</button>
-            </div>
+        <div id="menu">
+            
         </div>
-
+        <div id='load'></div>
     </div>
     
 </body>
