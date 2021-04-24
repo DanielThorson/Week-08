@@ -17,13 +17,15 @@
         <h1 class="font ">Main Menu</h1>
         <div>
             <h3>01. Select A Shop Location</h3>
-            <input type="text" name="shop" id="shop">
+            <select name="shop"  class="dropdown">
+                <option id="shops" value="BLANK"></option>
+            </select>
             <script src="./Shop_Fetch.js"></script>
         </div>
         <br>
-        <div class="cell">
+        <div>
             <h3 class="">02. Please Make A Selection</h3>
-            <div class="flex center">
+            <div class="flex center cell">
                 <button onclick="document.location='./Create_Donut_Shop.html'" class="button1">Create New Shop</button>
                 <button onclick="document.location='./Create_New_Donut_Type.html'" class="button1">Create New Donut</button>
                 <button onclick="document.location='./Add_Inventory.html'" class="button1">Add Inventory</button>

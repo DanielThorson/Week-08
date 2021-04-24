@@ -29,5 +29,3 @@ fetch("https://donutshop-api.herokuapp.com/inventory?id=234", {
   .catch((err) => {
     console.error(err);
   });
-// console.log("last", rows);
-// {type:'Maple Bar', price: 2, count: 34}

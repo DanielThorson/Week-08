@@ -19,24 +19,6 @@ fetch("https://donutshop-api.herokuapp.com/revenue?id=234", {
     console.error(err);
   });
 
-// for inventory page
-fetch("https://donutshop-api.herokuapp.com/inventory?id=234", {
-  method: "GET",
-})
-  .then((response) => response.json())
-  .then((data) => {
-    let x = document.getElementById("inventory");
-
-    let result = document.createElement("h5");
-    result.innerText = JSON.stringify(data.donuts);
-    x.prepend(result);
-    // console.log(data.donuts);
-    // getInput();
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
 // for adding donuts
 let btn3 = document.querySelector("#donut_add");
 
@@ -53,20 +35,3 @@ btn6.addEventListener("click", function (event) {
   let count = prompt("How many do you want?");
   alert("Customer Order Completed");
 });
-
-
-function getShopList() {
-  fetch("https://donutshop-api.herokuapp.com/shops/", {
-    method: "GET",
-  })
-    .then((response) => {
-      response.json();
-    })
-    .then((data) => console.log(JSON.stringify(data)))
-    .catch((err) => {
-      console.error(err);
-    });
-    
-}
-
-getShopList();
